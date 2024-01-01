@@ -39,8 +39,8 @@ func setupRoutes(r *mux.Router, s *Server) {
 
 	r.HandleFunc("/search", s.makeHttpHandlerFunc(s.HandleSearchMediaRequest, true))
 
-	r.HandleFunc("/media/metainfo", s.makeHttpHandlerFunc(s.HandleMediaToMetaInfoRequest, true))
-	r.HandleFunc("/metainfo/media", s.makeHttpHandlerFunc(s.HandleMetaInfoToMediaRequest, true))
+	r.HandleFunc("/media/for/metainfo/{id}", s.makeHttpHandlerFunc(s.HandleMediaOfMetaInfoRequest, true))
+	r.HandleFunc("/metainfo/for/media/{id}", s.makeHttpHandlerFunc(s.HandleMetaInfoOfMediaRequest, true))
 
 	r.HandleFunc("/authenticate", s.makeHttpHandlerFunc(s.HandleAuthRequest, false))
 	r.HandleFunc("/synchronize", s.makeHttpHandlerFunc(s.HandleSynchronizationRequest, true))

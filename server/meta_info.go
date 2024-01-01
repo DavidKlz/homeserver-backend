@@ -83,10 +83,10 @@ func (s *Server) handleDeleteMetaInfoById(w http.ResponseWriter, r *http.Request
 	return WriteJson(w, http.StatusOK, types.DefaultResponse{Success: true, Message: "meta info removed"})
 }
 
-func (s *Server) HandleMediaToMetaInfoRequest(w http.ResponseWriter, r *http.Request) error {
+func (s *Server) HandleMediaOfMetaInfoRequest(w http.ResponseWriter, r *http.Request) error {
 	return nil
 }
 
-func (s *Server) HandleMetaInfoToMediaRequest(w http.ResponseWriter, r *http.Request) error {
+func (s *Server) HandleMetaInfoOfMediaRequest(w http.ResponseWriter, r *http.Request) error {
 	return nil
 }
